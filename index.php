@@ -47,11 +47,12 @@ switch($method) {
         break;
 
     case "PUT":
-        $user = json_decode( file_get_contents('php://input') );
+        $user = json_decode(file_get_contents('php://input'));
         $sql = "UPDATE users SET name= :name, email =:email, mobile =:mobile, updated_at =:updated_at WHERE id = :id";
         $stmt = $conn->prepare($sql);
         $updated_at = date('Y-m-d');
-        $stmt->bindParam(':id', $user->id);
+        $path = explode('/', $_SERVER['REQUEST_URI']);
+        $stmt->bindParam(':id', $path[3]);
         $stmt->bindParam(':name', $user->name);
         $stmt->bindParam(':email', $user->email);
         $stmt->bindParam(':mobile', $user->mobile);
