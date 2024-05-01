@@ -2,6 +2,11 @@
 
 A simple php api to perform crud opearions.
 
+### Setup Instructions
+
+1. Install XAMPP (or any other PHP development environment).
+2. Clone this repo and move it to the xampp/htdocs/ directory.
+
 ##### API Endpoints
 
 #### GET
