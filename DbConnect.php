@@ -3,10 +3,10 @@
 	* Database Connection
 	*/
 	class DbConnect {
-		private $server = 'localhost';
-		private $dbname = 'php-crud';
-		private $user = 'root';
-		private $pass = '';
+		private $server='sql6.freesqldatabase.com';
+		private $dbname='sql6705010';
+		private $user='sql6705010';
+		private $pass='BS9bl7LxQJ';
 
 		public function connect() {
 			try {
